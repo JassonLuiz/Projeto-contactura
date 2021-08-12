@@ -1,1 +1,29 @@
-<p>form-usuarios works!</p>
+<app-navbar></app-navbar>
+<!-- Título do formulario de usuário-->
+<section>
+    <div class="container_title">
+        <h1>Cadastrar Novo Usuário</h1>
+    </div>
+</section>
+<section class="sect-form">
+    <form class="forms" [formGroup]="formUsuarios">
+        <div>
+            <label>Email:</label>
+            <input formControlName="username" type="email" class="text-input" name="email">
+        </div>
+        <div>
+            <label>Senha:</label>
+            <input formControlName="password" type="password" class="text-input" name="password">
+        </div>
+        <div>
+            <label>Nome:</label>
+            <input formControlName="name" type="text" class="text-input" name="name">
+        </div>
+        <div class="checbox">
+            <input formControlName="admin" type="checkbox" id="checkb" name="admin">
+            <label for="checkb">Administrador?</label>
+        </div>
+
+        <button class="button" id="botao-salvar" mat-raised-button color="primary">Salvar Usuário</button>
+    </form>
+</section>

@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { ListaContatosComponent } from './lista-contatos/lista-contatos.component';
 import { AuthAdminGuard, AuthGuard } from './service/auth.guard';
 import { ListaUsuariosComponent } from './lista-usuarios/lista-usuarios.component';
 import { FormContatosComponent } from './form-contatos/form-contatos.component';
 import { FormUsuariosComponent } from './form-usuarios/form-usuarios.component';
-import { Router, RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule} from '@angular/router';
 import { NotFoundComponent } from './sharedComponents/not-found/not-found.component';
 
 const routes: Routes = [

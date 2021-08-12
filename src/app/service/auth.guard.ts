@@ -29,7 +29,7 @@ export class AuthAdminGuard implements CanActivate {
 
   canActivate(
     next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
+    state: RouterStateSnapshot): Observable<boolean> | boolean {
     if(localStorage.getItem('token') != null && localStorage.getItem('admin') == 'true'){
       return true;
     }else{

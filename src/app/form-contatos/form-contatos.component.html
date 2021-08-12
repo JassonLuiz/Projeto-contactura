@@ -1,1 +1,26 @@
-<p>form-contatos works!</p>
+<app-navbar></app-navbar>
+<!-- Título do formulario de contato -->
+<section>
+    <div class="container_title">
+       <h1>Cadastrar Novo Contato</h1>  
+    </div>
+</section>
+<section class="sect-form">
+    <form class="forms" [formGroup]="formContatos">
+       <div>
+           <label>Nome:</label>
+           <input formControlName="name" type="text" class="text-input">     
+       </div>
+       <div>
+           <label>Phone:</label>
+           <input formControlName="phone" type="text" class="text-input">     
+       </div>
+       <div class="div-email">
+           <label>Email:</label>
+           <input formControlName="email" type="email" class="text-input  email">    
+       </div> 
+       <div> 
+            <button class="button" mat-raised-button color="primary" (click)="save()">Salvar Contato</button>
+       </div>
+    </form>    
+</section>
